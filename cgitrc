@@ -134,7 +134,9 @@ snapshots=
 # Direct cgit to repository location managed by gitolite
 remove-suffix=0
 project-list=/var/lib/git/projects.list
-section-from-path=1
+section-from-path=0
+remove-suffix=1
+enable-blame=1
 scan-path=/var/lib/git/repositories
 # Specify some default clone prefixes
 clone-prefix=http://cgit.eda.gay ssh://git@cgit.eda.gay
