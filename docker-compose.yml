@@ -1,0 +1,21 @@
+version: "2.1"
+
+services:
+    app:
+        build:
+            context: ./gitolite-cgit-docker/gitolite-cgit/
+            dockerfile: Dockerfile
+        image: rusian/gitolite-cgit
+        container_name: gitolite-cgit
+        env_file: config.env
+        ports:
+            - "23:22"
+            - "8823:80"
+        tty: true
+        volumes:
+            - ssh:/etc/ssh/
+            - git:/var/lib/git/
+            - ./cgitrc:/etc/cgitrc
+volumes:
+    git:
+    ssh:

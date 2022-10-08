@@ -1,0 +1,3 @@
+[submodule "gitolite-cgit-docker"]
+	path = gitolite-cgit-docker
+	url = https://git.sr.ht/~heckyel/gitolite-cgit-docker
